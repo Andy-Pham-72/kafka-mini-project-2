@@ -77,6 +77,7 @@ $ docker-compose -f docker-compose.kafka.yml exec broker kafka-console-consumer 
 or run:
 
 ```bash
+$ chmod +x ./read_whole_topic.sh
 $ ./read_whole_topic.sh
 ```
 and see the total number of the read messages, Run `Ctrl + C`:
@@ -86,5 +87,6 @@ and see the total number of the read messages, Run `Ctrl + C`:
 or
 Stop the generator and delete all the containers/networks/volumes:
 ```bash
+$ chmod +x ./stop.sh
 $ ./stop.sh
 ```
