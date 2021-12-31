@@ -84,9 +84,6 @@ or run:
 ```bash
 $ ./read_whole_topic.sh
 ```
-Then `Ctrl+C` to cancel as below output:
-
-![Screen Shot 2021-12-31 at 3 48 37 PM](https://user-images.githubusercontent.com/70767722/147839004-db829e38-fa18-4811-ad25-d1086a9f2cf1.png)
 
 5. Stop the generator and delete all the containers/networks/volumes:
 ```bash
