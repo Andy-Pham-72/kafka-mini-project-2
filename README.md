@@ -38,12 +38,18 @@ Both applications will run in Docker containers and interact with the Kafka clus
 
 ### Architecture diagram
 
+![Screen Shot 2021-12-31 at 3 57 29 PM](https://user-images.githubusercontent.com/70767722/147838824-3a6cfb90-d06d-4b1a-9daf-10490fa923a4.png)
+
+
 ## The fraud detector mechanism
 
 The fraud detector is a typical example of a stream processing application.
 It takes a stream of transactions as an input, performs the filtering task, then outputs the result into two separate streams - those that are legitimate, and those that are suspicious, an operation also known as **branching**.
 
-## picture
+![Screen Shot 2021-12-31 at 3 57 49 PM](https://user-images.githubusercontent.com/70767722/147838831-f440402a-cabb-4da6-af4b-e5c9e68f9375.png)
+
+**Assumption:**
+Since in the real world, deteching fraud is a complex problem and it depends on so many different metrics to determine fraud. In this project, we will keep the metric simple which it is illegal to send more than **$900.00** at a time. As a result, any transaction whose amount is greater than 900 can be considered as fraud.
 
 ## Steps to run the application
 
@@ -59,9 +65,14 @@ $ chmod +w ./start_main_docker_compose.sh
 $ ./start_main_docker_compose.sh
 ```
 The we should see this output:
+![Screen Shot 2021-12-31 at 3 45 33 PM](https://user-images.githubusercontent.com/70767722/147838855-f39b568f-52c5-4ea8-ae4d-e4383ba7d75f.png)
+
+We can see the legit transaction which lower than our metric which is: $900.00
+![Screen Shot 2021-12-31 at 3 46 17 PM](https://user-images.githubusercontent.com/70767722/147838880-a2ad89d3-3240-4b0c-bb8a-989a7ee1e71e.png)
+
 
 3. Pressing `Ctrl + C` to strop the `kafka-console-consumer` and see the total number of the read messages:
-## picture
+![Screen Shot 2021-12-31 at 3 48 37 PM](https://user-images.githubusercontent.com/70767722/147838840-a43a5772-71c2-4a61-ab92-5476055ea7d3.png)
 
 4. Read the whole topic, run this command:
 ```bash
@@ -75,7 +86,7 @@ $ ./read_whole_topic.sh
 ```
 Then `Ctrl+C` to cancel as below output:
 
-# picture
+![Screen Shot 2021-12-31 at 3 48 37 PM](https://user-images.githubusercontent.com/70767722/147839004-db829e38-fa18-4811-ad25-d1086a9f2cf1.png)
 
 5. Stop the generator and delete all the containers/networks/volumes:
 ```bash
