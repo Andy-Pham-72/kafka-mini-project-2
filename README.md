@@ -69,11 +69,7 @@ The we should see this output:
 We can see the legit transaction which lower than our metric which is: $900.00
 ![Screen Shot 2021-12-31 at 3 46 17 PM](https://user-images.githubusercontent.com/70767722/147838880-a2ad89d3-3240-4b0c-bb8a-989a7ee1e71e.png)
 
-
-3. Pressing `Ctrl + C` to strop the `kafka-console-consumer` and see the total number of the read messages:
-![Screen Shot 2021-12-31 at 3 48 37 PM](https://user-images.githubusercontent.com/70767722/147838840-a43a5772-71c2-4a61-ab92-5476055ea7d3.png)
-
-4. Read the whole topic, run this command:
+3. Read the whole topic, run this command:
 ```bash
 $ docker-compose -f docker-compose.kafka.yml exec broker kafka-console-consumer --bootstrap-server localhost:9092 --topic queueing.transactions --from-beginning
 ```
@@ -83,6 +79,12 @@ or run:
 ```bash
 $ ./read_whole_topic.sh
 ```
+and see the total number of the read messages, Run `Ctrl + C`:
+
+
+
+4. Run `Ctrl + C` to stop the `kafka-console-consumer` 
+![Screen Shot 2021-12-31 at 3 48 37 PM](https://user-images.githubusercontent.com/70767722/147838840-a43a5772-71c2-4a61-ab92-5476055ea7d3.png)
 
 5. Stop the generator and delete all the containers/networks/volumes:
 ```bash
