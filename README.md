@@ -80,13 +80,11 @@ or run:
 $ ./read_whole_topic.sh
 ```
 and see the total number of the read messages, Run `Ctrl + C`:
-
-
+![Screen Shot 2021-12-31 at 4 14 27 PM](https://user-images.githubusercontent.com/70767722/147839182-0e98eede-ec68-4c4b-b980-515ab0c4f406.png)
 
 4. Run `Ctrl + C` to stop the `kafka-console-consumer` 
-![Screen Shot 2021-12-31 at 3 48 37 PM](https://user-images.githubusercontent.com/70767722/147838840-a43a5772-71c2-4a61-ab92-5476055ea7d3.png)
-
-5. Stop the generator and delete all the containers/networks/volumes:
+or
+Stop the generator and delete all the containers/networks/volumes:
 ```bash
 $ ./stop.sh
 ```
