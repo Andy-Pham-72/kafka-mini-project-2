@@ -1,12 +1,13 @@
 # Kafka Mini Project
 
 ## Building A Streaming Fraud Detection System With Kafka and Python
+![Screen Shot 2021-12-31 at 4 09 01 PM](https://user-images.githubusercontent.com/70767722/147839040-e395bdd8-1320-4948-ae11-38264656c86f.png)
 
-## Objective
+## Objective:
 
 In this project, we create a streaming application backed by **Apache Kafka** using a **Python client**. This is a simple **real-time fraud detection system**. We will generate a stream of synthetic transactions and use Python script to process those stream of transactions to detect which ones are potential fraud.
 
-## Prerequisites
+## Prerequisites:
 
 Below is the folder map to all the files we have for the project:
 
@@ -28,8 +29,6 @@ Below is the folder map to all the files we have for the project:
 ├── restart.sh
 ├── stop.sh
 ```
-
-## Topic
 
 We will produce fake transactions on one end, filter and log those that look suspicious on the other end. This will include:
 * a transaction generator (which produces the synthetic data for the process).
